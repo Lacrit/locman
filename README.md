@@ -5,10 +5,7 @@
 
 The *token.json* will be generated based on your credentials after the first request is made.
 
-**Remember to add the following files to *.gitignore*.**
-
-* `./creadentials.json`
-* `./token.json`
+**Remember to add `./creadentials.json` to *.gitignore*.**
 
 ***
 
