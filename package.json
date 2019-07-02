@@ -36,7 +36,7 @@
   "main": "./Localization/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://Lacrit@bitbucket.org/itsoldevteam/translationmanager.git"
+    "url": "git+https://github.com/Lacrit/locman"
   },
   "keywords": [
     "localization",
@@ -44,6 +44,6 @@
     "i18n"
   ],
   "author": "Lacrit",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/itsoldevteam/translationmanager#readme"
+  "license": "MIT",
+  "homepage": "https://github.com/Lacrit/locman"
 }
