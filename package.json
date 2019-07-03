@@ -1,6 +1,6 @@
 {
   "name": "locman",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "dependencies": {
     "csv-parser": "",
     "fs": "",
