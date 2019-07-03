@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Lacrit/locman.svg?branch=master)](https://travis-ci.org/Lacrit/locman)
+
 ## Setup 
 
 * Download your [credentials.json](https://developers.google.com/sheets/api/quickstart/nodejs) and place it in the root of your project.
