@@ -42,18 +42,16 @@ It should have the following structure:
 
 ## Usage
 
-`node ./Localization/index.js command [-o|spreadsheetID]`
-
- - `-o` stands for *override*
+`[ID=arg] npm run script`
 
 ***
 
-## Commands
+## Scripts
 
-* **push** — *standardizes* local data, creates and deletes sheets if needed and *merges*/*overrides* the data with the spreasheet (takes an optional argument `-o`)
-* **pull** — creates and deletes json modules if needed and *merges*/*overrides* the data locally (takes an optional argument `-o`)
-* **init** — creates the file containing spreadsheetID (takes `spreasheetID` as an argument)
-* **diff** — shows the difference between sheets and your local modules
+* **locman-push** — *standardizes* local data, creates and deletes sheets if needed and *merges*/*overrides* the data with the spreasheet (for override: `locman-push-o`)
+* **locman-pull** — creates and deletes json modules if needed and *merges*/*overrides* the data locally (for override: `locman-pull-o`)
+* **ID=arg locman-init** — creates the file containing spreadsheetID (where `arg` is the spreadsheetID)
+* **locman-diff** — shows the difference between sheets and your local modules
 
 ***
 
