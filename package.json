@@ -11,9 +11,15 @@
     "v4": ""
   },
   "scripts": {
+    "locman-init": "node ./Localization/index.js init %ID%",
+    "locman-push": "node ./Localization/index.js push",
+    "locman-pull": "node ./Localization/index.js pull",
+    "locman-push-o": "node ./Localization/index.js push -o",
+    "locman-pull-o": "node ./Localization/index.js pull -o",
+    "locman-diff": "node ./Localization/index.js diff",
     "lint": "eslint .",
     "lintfix": "eslint . --fix"
-  },
+  },  
   "lint-staged": {
     "*.js": [
       "eslint --fix",
