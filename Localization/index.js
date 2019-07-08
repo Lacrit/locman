@@ -3,6 +3,7 @@ const { google } = require('googleapis');
 
 const sheets = google.sheets('v4');
 const fs = require('fs');
+const { resolve } = require('path');
 const _ = require('lodash');
 const authorizationHelpers = require('./authorizationHelpers');
 const helpers = require('./helpers');
@@ -123,7 +124,7 @@ fs.readFile('./credentials.json', (err, content) => {
         await pullData();
         break;
       case 'init':
-        fs.writeFileSync('./Localization/spreadsheet', process.argv[3]);
+        fs.writeFileSync(resolve(__dirname, 'spreadsheet'), process.argv[3]);
         break;
       default:
         break;
