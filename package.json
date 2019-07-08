@@ -1,6 +1,6 @@
 {
   "name": "locman",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "dependencies": {
     "csv-parser": "",
     "fs": "",
@@ -10,7 +10,7 @@
     "readline": "",
     "v4": ""
   },
-  "bin": { 
+  "bin": {
     "locman": "./Localization/index.js"
   },
   "scripts": {
