@@ -60,10 +60,10 @@ const _mergeArrays = (arrays) => {
 // eslint-disable-next-line arrow-body-style
 const _flatten = (object) => {
   // eslint-disable-next-line wrap-iife
-  return Object.assign({}, ...function flatten(child, path = []) {
+  return Object.assign({}, ...function flatten(child, pathL = []) {
     return [].concat(...Object.keys(child).map(key => (typeof child[key] === 'object'
-      ? flatten(child[key], path.concat([key]))
-      : ({ [path.concat([key]).join('.')]: child[key] })),
+      ? flatten(child[key], pathL.concat([key]))
+      : ({ [pathL.concat([key]).join('.')]: child[key] })),
     ));
   }(object));
 };
