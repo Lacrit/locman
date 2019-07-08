@@ -1,4 +1,4 @@
-const { join } = require('path');
+const path = require('path');
 const fs = require('fs');
 const readline = require('readline');
 const _ = require('lodash');
@@ -7,10 +7,10 @@ const https = require('https');
 
 const LangsPath = 'public/locales'; // project structure assumption
 
-const getLanguages = path => fs.readdirSync(path)
-  .filter(f => fs.statSync(join(path, f)).isDirectory());
+const getLanguages = pathL => fs.readdirSync(pathL)
+  .filter(f => fs.statSync(path.join(path, f)).isDirectory());
 
-const SpreadsheetId = fs.readFileSync('./spreadsheet', 'utf-8');
+const SpreadsheetId = fs.readFileSync(path.resolve(__dirname, 'spreadsheet'), 'utf-8');
 const Langs = getLanguages(LangsPath);
 const Headers = ['key'].concat(Langs);
 
