@@ -391,11 +391,11 @@ const prepareData = async (file, i, dataPostRequest = null) => {
   await _commandsDivision(localData, file, dataPostRequest, tmp);
 };
 
-const largestSubDirFilesCount = (path) => {
+const largestSubDirFilesCount = (pathL) => {
   let maxLength = 0;
   Langs.forEach(lang => {
-    if (fs.readdirSync(`${path}/${lang}`).length > maxLength) {
-      maxLength = fs.readdirSync(`${path}/${lang}`).length;
+    if (fs.readdirSync(`${pathL}/${lang}`).length > maxLength) {
+      maxLength = fs.readdirSync(`${pathL}/${lang}`).length;
     }
   });
   return maxLength;
