@@ -10,7 +10,7 @@ const LangsPath = 'public/locales'; // project structure assumption
 const getLanguages = path => fs.readdirSync(path)
   .filter(f => fs.statSync(join(path, f)).isDirectory());
 
-const SpreadsheetId = fs.readFileSync('./Localization/spreadsheet', 'utf-8');
+const SpreadsheetId = fs.readFileSync('./spreadsheet', 'utf-8');
 const Langs = getLanguages(LangsPath);
 const Headers = ['key'].concat(Langs);
 
