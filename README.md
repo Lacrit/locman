@@ -7,7 +7,7 @@
 
 The *token.json* will be generated based on your credentials after the first request is made.
 
-**Remember to add `./creadentials.json` to *.gitignore*.**
+**Remember to add `creadentials.json` and `token.json` to *.gitignore*.**
 
 ***
 
@@ -44,16 +44,18 @@ It should have the following structure:
 
 ## Usage
 
-`[ID=arg] npm run script`
+`locman command [-o|spreadsheetID]`
+
+- `-o` stands for *override* 
 
 ***
 
-## Scripts
+## Available commands
 
-* **locman-push** — *standardizes* local data, creates and deletes sheets if needed and *merges*/*overrides* the data with the spreasheet (for override: `locman-push-o`)
-* **locman-pull** — creates and deletes json modules if needed and *merges*/*overrides* the data locally (for override: `locman-pull-o`)
-* **ID=arg locman-init** — creates the file containing spreadsheetID (where `arg` is the spreadsheetID)
-* **locman-diff** — shows the difference between sheets and your local modules
+* **push** — *standardizes* local data, creates and deletes sheets if needed and *merges*/*overrides* the data with the spreasheet (takes an optional argument `-o`)
+* **pull** — *standardizes* local data, creates and deletes json modules if needed and *merges*/*overrides* the data locally (takes an optional argument `-o`)
+* **init** — creates the file containing spreadsheetID (takes `spreadsheetID` as an argument)
+* **diff** — *standardizes* local data, shows the difference between sheets and your local modules
 
 ***
 
@@ -88,3 +90,6 @@ _**Conflict**_ appears whenever the translation for the key, that exist both loc
 
 Force pushing or pulling changes.
 
+## Diff 
+
+Shows every sheet existing in the spreadsheet highlighting changed translations, added keys and files.
