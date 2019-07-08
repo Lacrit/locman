@@ -3,7 +3,7 @@ const readline = require('readline');
 const { google } = require('googleapis');
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
-const TOKEN_PATH = './Localization/token.json';
+const TOKEN_PATH = './token.json';
 
 
 const _getNewToken = (oAuth2Client, callback) => {
