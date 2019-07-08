@@ -8,7 +8,7 @@ const https = require('https');
 const LangsPath = 'public/locales'; // project structure assumption
 
 const getLanguages = pathL => fs.readdirSync(pathL)
-  .filter(f => fs.statSync(path.join(path, f)).isDirectory());
+  .filter(f => fs.statSync(path.join(pathL, f)).isDirectory());
 
 const SpreadsheetId = fs.readFileSync(path.resolve(__dirname, 'spreadsheet'), 'utf-8');
 const Langs = getLanguages(LangsPath);
