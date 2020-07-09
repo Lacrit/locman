@@ -265,7 +265,9 @@ const _remoteOnly = async (remoteSheets, fileName) => {
   ));
 
   await new Promise(resolve => response
-    .pipe(csv())
+    .pipe(csv({
+      mapHeaders: ({ header }) => (header !== '' ? header : null),
+    }))
     .on('data', (data) => tmp.push(data))
     .on('end', resolve),
   );
@@ -352,7 +354,9 @@ const _sharedFiles = async (remoteSheets, i) => {
   ));
 
   await new Promise(resolve => response
-    .pipe(csv())
+    .pipe(csv({
+      mapHeaders: ({ header }) => (header !== '' ? header : null),
+    }))
     .on('data', (data) => tmp.push(data))
     .on('end', resolve),
   );
@@ -386,7 +390,9 @@ const prepareData = async (file, i, dataPostRequest = null) => {
   ));
 
   await new Promise(resolve => response
-    .pipe(csv())
+    .pipe(csv({
+      mapHeaders: ({ header }) => (header !== '' ? header : null),
+    }))
     .on('data', (data) => tmp.push(data))
     .on('end', resolve),
   );
