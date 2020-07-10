@@ -28,7 +28,7 @@ It works also backwards, so whenever someone add a translation to a specific key
 
 So in short it helps with synchronizing those translations into files that translators can easily operate on and then merge it back whenever there is a new translation.
 
-**Pleasem beware that it is a work in progress, so some features, like adding a new language are still missing and can only be done manually. Pull requests are welcome**
+**Please, beware that it is a work in progress, so some features, like adding a new language are still missing and can only be done manually. Pull requests are welcome**
 
 ## Setup 
 
