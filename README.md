@@ -1,7 +1,9 @@
 [![Build Status](https://travis-ci.org/Lacrit/locman.svg?branch=master)](https://travis-ci.org/Lacrit/locman)
 
 Simple plugin that aims to help with maintenance of remote translation files.
-We usually store keys and translations in JSON and we want translators to do their work independently, without having to access the repository. For this, we can flatten the local JSON structure and push it to Google spreasheets, so that structure like this: 
+We usually store keys and translations in JSON and we want translators to do their work independently, without having to access the repository.
+
+For this, we can flatten the local JSON structure and push it to Google spreasheets, so that structure like this: 
 
 ``` 
 ...
@@ -19,8 +21,11 @@ We usually store keys and translations in JSON and we want translators to do the
 ```
 
 translates to this
+
 ![Example](Localization/pics/exampleExcel.png)
+
 It works also backwards, so whenever someone add a translation to a specific key and language, we can pull it back to the code.
+
 So in short it helps with synchronizing those translations into files that translators can easily operate on and then merge it back whenever there is a new translation.
 
 **Pleasem beware that it is a work in progress, so some features, like adding a new language are still missing and can only be done manually. Pull requests are welcome**
