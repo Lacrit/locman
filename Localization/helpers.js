@@ -260,7 +260,7 @@ const _remoteOnly = async (remoteSheets, fileName) => {
   const { sheetId } = file;
   const tmp = [];
   // https://docs.google.com/spreadsheets/d/${SpreadsheetId}/export?gid=${sheetId}&format=csv&id=${SpreadsheetId} < - doesn't work anymore
-  const response = await new Promise(resolve => https.get(`https://docs.google.com/spreadsheets/d/${SpreadsheetId}/gviz/tq?tqx=out:csv&sheet=${sheetId}`,
+  const response = await new Promise(resolve => https.get(`https://docs.google.com/spreadsheets/d/${SpreadsheetId}/gviz/tq?tqx=out:csv&gid=${sheetId}`,
     resolve,
   ));
 
@@ -348,8 +348,9 @@ const _sharedFiles = async (remoteSheets, i) => {
   const file = remoteSheets.find(e => e.title === fileName);
   const { sheetId } = file;
   const tmp = [];
+
   // https://docs.google.com/spreadsheets/d/${SpreadsheetId}/export?gid=${sheetId}&format=csv&id=${SpreadsheetId} < - doesn't work anymore
-  const response = await new Promise(resolve => https.get(`https://docs.google.com/spreadsheets/d/${SpreadsheetId}/gviz/tq?tqx=out:csv&sheet=${sheetId}`,
+  const response = await new Promise(resolve => https.get(`https://docs.google.com/spreadsheets/d/${SpreadsheetId}/gviz/tq?tqx=out:csv&gid=${sheetId}`,
     resolve,
   ));
 
@@ -385,7 +386,7 @@ const prepareData = async (file, i, dataPostRequest = null) => {
   const [, ...localData] = _parseTranslations(i);
   const tmp = [];
   // https://docs.google.com/spreadsheets/d/${SpreadsheetId}/export?gid=${sheetId}&format=csv&id=${SpreadsheetId} < - doesn't work anymore
-  const response = await new Promise(resolve => https.get(`https://docs.google.com/spreadsheets/d/${SpreadsheetId}/gviz/tq?tqx=out:csv&sheet=${sheetId}`,
+  const response = await new Promise(resolve => https.get(`https://docs.google.com/spreadsheets/d/${SpreadsheetId}/gviz/tq?tqx=out:csv&gid=${sheetId}`,
     resolve,
   ));
 
